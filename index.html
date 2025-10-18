@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotoBrasil - Resultados, Apostas e Notícias</title>
+
+        <!-- Open Graph -->
+    <meta property="og:title" content="Resultados das Loterias">
+    <meta property="og:description" content="Diacas e criação de jogos da MegaSena, Lotomania, Lotofacil e etc.">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8353WH4FM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W8353WH4FM');
+    </script>
+
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540724098155318"
+     crossorigin="anonymous"></script>
+     
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-dice"></i>
+                    <span>LotoBrasil</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#results">Resultados</a></li>
+                        <li><a href="#bet">Apostas</a></li>
+                        <li><a href="#strategies">Estratégias</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Confira os Resultados das Loterias</h1>
+                <p>Fique por dentro dos últimos resultados, gere apostas e receba tudo por e-mail!</p>
+                <button class="btn btn-primary" onclick="scrollToSection('results')">Ver Resultados</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lottery Results -->
+    <section id="results">
+        <div class="container">
+            <h2 class="section-title">Resultados Recentes</h2>
+
+            <!-- Loader -->
+            <div id="loader" class="loader">
+                <div class="spinner"></div>
+                <p>Carregando resultados...</p>
+            </div>
+
+            <div class="lottery-cards" id="results-container">
+                <!-- Os resultados serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bet Generator -->
+    <section id="bet">
+        <div class="container">
+            <h2 class="section-title">Gerador de Apostas</h2>
+            <div class="bet-generator">
+                <div class="form-group">
+                    <label for="lottery-type">Selecione o tipo de loteria:</label>
+                    <select id="lottery-type" class="form-select">
+                        <option value="megasena">Mega-Sena</option>
+                        <option value="lotofacil">Lotofácil</option>
+                        <option value="quina">Quina</option>
+                        <option value="lotomania">Lotomania</option>
+                        <option value="timemania">Timemania</option>
+                        <option value="diadesorte">Dia de Sorte</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="generateBet()">Gerar Aposta</button>
+                <div class="generated-bet" id="generated-bet">
+                    <p>Suas apostas aparecerão aqui</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategies Section -->
+    <section id="strategies">
+        <div class="container">
+            <h2 class="section-title">Estratégias de Apostas</h2>
+            <p class="strategies-intro">
+                Aprimore sua experiência com loterias utilizando estratégias práticas e responsáveis. Clique em cada card para aprender mais.
+            </p>
+            <div class="strategy-grid">
+                <a href="estrategia1.html" class="strategy-card">
+                    <i class="fas fa-lightbulb strategy-icon"></i>
+                    <h3>Diversifique seus números</h3>
+                    <p>Evite padrões óbvios e varie entre números altos, baixos, pares e ímpares.</p>
+                </a>
+                <a href="estrategia2.html" class="strategy-card">
+                    <i class="fas fa-users strategy-icon"></i>
+                    <h3>Jogue em grupo</h3>
+                    <p>Participar de bolões aumenta suas chances de ganhar compartilhando os custos.</p>
+                </a>
+                <a href="estrategia3.html" class="strategy-card">
+                    <i class="fas fa-wallet strategy-icon"></i>
+                    <h3>Estabeleça um orçamento</h3>
+                    <p>Defina quanto você pode gastar por mês e nunca ultrapasse esse valor.</p>
+                </a>
+                <a href="estrategia4.html" class="strategy-card">
+                    <i class="fas fa-chart-bar strategy-icon"></i>
+                    <h3>Analise estatísticas</h3>
+                    <p>Observe números frequentes e atrasados para tomar decisões mais informadas.</p>
+                </a>
+                <a href="estrategia5.html" class="strategy-card">
+                    <i class="fas fa-star strategy-icon"></i>
+                    <h3>Use padrões próprios</h3>
+                    <p>Crie métodos de escolha pessoal, como datas especiais ou combinações favoritas.</p>
+                </a>
+                <a href="estrategia6.html" class="strategy-card">
+                    <i class="fas fa-clock strategy-icon"></i>
+                    <h3>Evite apostas por impulso</h3>
+                    <p>Planeje suas apostas para manter controle e diversão, evitando decisões emocionais.</p>
+                </a>
+                <a href="estrategia7.html" class="strategy-card">
+                    <i class="fas fa-random strategy-icon"></i>
+                    <h3>Alterne entre jogos</h3>
+                    <p>Combine diferentes loterias e tipos de apostas para diversificar seus resultados.</p>
+                </a>
+                <a href="estrategia8.html" class="strategy-card">
+                    <i class="fas fa-brain strategy-icon"></i>
+                    <h3>Estude probabilidades</h3>
+                    <p>Entenda chances reais de cada aposta e use a matemática a seu favor para decisões inteligentes.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact">
+            <form id="form-contato" action="https://formsubmit.co/wellingtongusmao18@gmail.com" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nome" class="form-control" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="assunto" class="form-control" placeholder="Assunto" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensagem" class="form-control" placeholder="Sua mensagem" required></textarea>
+                </div>
+
+                <!-- Página para onde o usuário será redirecionado após envio -->
+                <input type="hidden" name="_next" value="sucesso.html">
+
+                <!-- Remove captcha automático -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+
+                <!-- Mensagens -->
+                <div id="msg-sucesso" style="display:none; margin-top:12px; color:green; font-weight:600;">
+                ✅ Sua mensagem foi enviada com sucesso!
+                </div>
+                <div id="msg-erro" style="display:none; margin-top:12px; color:#c00; font-weight:600;">
+                ❌ Erro ao enviar. Tente novamente.
+                </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LotoBrasil</h3>
+                    <p>O site mais completo para acompanhar os resultados das loterias e gerar suas apostas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#results">Resultados</a></li>
+                        <li><a href="#bet">Gerador de Apostas</a></li>
+                        <li><a href="estrategias.html">Estratégias</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#" onclick="openModal('termsModal')">Termos de Uso</a></li>
+                        <li><a href="#" onclick="openModal('privacyModal')">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LotoBrasil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modais -->
+    <div id="loginModal" class="modal"> ... </div>
+    <div id="registerModal" class="modal"> ... </div>
+    <!-- Modal de Termos de Uso -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Termos de Uso</h2>
+                <span class="close" onclick="closeModal('termsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Termos e Condições do LotoBrasil</h3>
+                <p>Ao acessar e utilizar o LotoBrasil, você concorda com os seguintes termos:</p>
+                <ul>
+                    <li>O LotoBrasil disponibiliza apenas resultados das loterias federais do Brasil. Não realizamos apostas nem garantimos prêmios.</li>
+                    <li>Você é responsável por suas próprias apostas e decisões relacionadas às loterias.</li>
+                    <li>O site pode solicitar informações pessoais, como nome, e-mail e dados de login, para oferecer acesso a recursos e atualizações.</li>
+                    <li>O LotoBrasil não se responsabiliza por quaisquer perdas, danos ou consequências decorrentes do uso das informações do site.</li>
+                    <li>Os conteúdos e resultados apresentados no site têm caráter informativo e podem sofrer alterações sem aviso prévio.</li>
+                    <li>O uso do site implica aceitação destes termos de forma integral.</li>
+                </ul>
+                <p>Se você não concorda com algum destes termos, recomendamos não utilizar o site.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Política de Privacidade -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Política de Privacidade</h2>
+                <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>Como protegemos seus dados</h3>
+                <p>Nossa política de privacidade visa informar como coletamos e utilizamos seus dados pessoais:</p>
+                <ul>
+                    <li>Coletamos informações fornecidas por você no cadastro, como nome, e-mail e dados de login, exclusivamente para oferecer acesso ao site e notificações.</li>
+                    <li>Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei ou para cumprir obrigações legais.</li>
+                    <li>Utilizamos suas informações para melhorar a experiência do usuário, enviar notificações sobre resultados de loterias e fornecer suporte.</li>
+                    <li>Tomamos medidas de segurança para proteger seus dados contra acessos não autorizados, perdas ou alterações.</li>
+                    <li>Você pode solicitar a exclusão de seus dados a qualquer momento entrando em contato conosco.</li>
+                </ul>
+                <p>Ao utilizar nosso site, você concorda com esta política de privacidade e com o tratamento de seus dados conforme descrito.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html> 
